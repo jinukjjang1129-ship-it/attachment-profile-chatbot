@@ -952,8 +952,8 @@ def draw_quadrant(self_model: float, other_model: float):
     ax.axvline(50, color="black", linewidth=2.0, zorder=1)
     ax.axhline(50, color="black", linewidth=2.0, zorder=1)
 
-    ax.text(25, 75, "안정형", ha="center", va="center", fontproperties=FP, fontsize=16)
-    ax.text(75, 75, "불안형", ha="center", va="center", fontproperties=FP, fontsize=16)
+    ax.text(25, 75, "불안형", ha="center", va="center", fontproperties=FP, fontsize=16)  
+    ax.text(75, 75, "안정형", ha="center", va="center", fontproperties=FP, fontsize=16)
     ax.text(25, 25, "거부형", ha="center", va="center", fontproperties=FP, fontsize=16)
     ax.text(75, 25, "회피형", ha="center", va="center", fontproperties=FP, fontsize=16)
 
