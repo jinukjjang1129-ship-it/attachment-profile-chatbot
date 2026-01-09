@@ -1,5 +1,4 @@
-### 배포 링크 https://attachment-profile-chatbot-qqd6sxueqytzalxsrwghba.streamlit.app/
-### 비밀번호: jinukjjang1@naver.com 메일 보내주세요!
+
 
 # 사랑의 이해  
 RAG 기반 개인 맞춤 연애 상담 챗봇 (Streamlit)
@@ -9,7 +8,8 @@ RAG 기반 개인 맞춤 연애 상담 챗봇 (Streamlit)
 RAG(Retrieval-Augmented Generation) 기반 연애 상담 챗봇입니다.
 
 개인 프로젝트/팀 프로젝트로 진행되었으며,  
-모델 설계부터 Streamlit Cloud 배포까지의 전체 과정을 경험하는 것을 목표로 했습니다. :contentReference[oaicite:0]{index=0}
+모델 설계부터 Streamlit Cloud 배포까지의 전체 과정을 경험하는 것을 목표로 했습니다. 
+배포 링크는 readme 하단에 있으며, 비밀번호는 메일로 요청하시면 알려드리겠습니다!
 
 ---
 
@@ -129,5 +129,6 @@ VectorDB 기반 RAG 구조를 사용했습니다.
 
 ---
 
-본 프로젝트는  
-**개인 맞춤형 상담 구조 설계와 RAG 기반 시스템 구현 경험을 정리하기 위한 기록용 프로젝트**입니다.
+### 배포 링크 https://attachment-profile-chatbot-qqd6sxueqytzalxsrwghba.streamlit.app/
+### 비밀번호: jinukjjang1@naver.com 메일 보내주세요!
+
