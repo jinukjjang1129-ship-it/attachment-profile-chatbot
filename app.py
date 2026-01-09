@@ -975,13 +975,13 @@ def score_to_pct_0_100(score_1_7: float) -> int:
     return int(round((score_1_7 - 1) / 6 * 100))
 
 
-def draw_dual_bar(ax, pct_right, left_end_label, right_end_label, title, font_prop):
+def draw_score_bar(ax, pct, left_end_label, right_end_label, title, font_prop):
     """
-    pct_right: 0~100 (오른쪽 비율)
-    - 오른쪽이 '높음/표현' 같이 긍정 방향일 때 그대로 넣으면 직관적으로 맞습니다.
+    pct: 0~100 (오른쪽으로 갈수록 높음)
+    - 배경 바(연한색) 위에 점수만큼 채우고
+    - 현재 위치를 세로선(marker)로 표시
     """
-    pct_right = max(0, min(100, int(pct_right)))
-    pct_left = 100 - pct_right
+    pct = max(0, min(100, float(pct)))
 
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 1)
@@ -990,35 +990,27 @@ def draw_dual_bar(ax, pct_right, left_end_label, right_end_label, title, font_pr
     bar_h = 0.42
     y = 0.5
 
-    # 왼쪽(낮음/억제), 오른쪽(높음/표현)
-    left_color = "#D7EAF6"
-    right_color = "#F28C28"
+    bg_color = "#D7EAF6"     # 배경
+    fill_color = "#F28C28"   # 점수 채움
 
-    # 왼쪽 채움
-    ax.barh([y], [pct_left], height=bar_h, left=0, zorder=1, color=left_color)
-    # 오른쪽 채움
-    ax.barh([y], [pct_right], height=bar_h, left=pct_left, zorder=2, color=right_color)
+    # 배경 바
+    ax.barh([y], [100], height=bar_h, left=0, zorder=1, color=bg_color)
+    # 채움(점수)
+    ax.barh([y], [pct], height=bar_h, left=0, zorder=2, color=fill_color)
 
+    # 현재 위치(세로선)
+    ax.vlines(pct, y - bar_h/2, y + bar_h/2, colors="white", linewidth=3, zorder=3)
+
+    # 제목/끝 라벨
     ax.text(0, 1.05, title, ha="left", va="bottom", fontproperties=font_prop, fontsize=14)
-
     ax.text(0, -0.15, left_end_label, ha="left", va="top", fontproperties=font_prop, fontsize=11)
     ax.text(100, -0.15, right_end_label, ha="right", va="top", fontproperties=font_prop, fontsize=11)
 
-    # 왼쪽 % 표시
-    if pct_left >= 10:
-        ax.text(pct_left - 2, y, f"{pct_left}%", ha="right", va="center",
-                fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
-    else:
-        ax.text(pct_left + 2, y, f"{pct_left}%", ha="left", va="center",
-                fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
-
-    # 오른쪽 % 표시
-    if pct_right >= 10:
-        ax.text(98, y, f"{pct_right}%", ha="right", va="center",
-                fontproperties=font_prop, fontsize=13, color="white", zorder=3)
-    else:
-        ax.text(pct_left + 2, y, f"{pct_right}%", ha="left", va="center",
-                fontproperties=font_prop, fontsize=13, color="white", zorder=3)
+    # 퍼센트 표시(커서 근처)
+    txt_x = pct + 1.5 if pct < 85 else pct - 1.5
+    ha = "left" if pct < 85 else "right"
+    ax.text(txt_x, y, f"{int(round(pct))}%", ha=ha, va="center",
+            fontproperties=font_prop, fontsize=13, color="black", zorder=4)
 
 
 def render_result():
@@ -1062,15 +1054,13 @@ def render_result():
 
         # 
         fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(ax1, expr_pct, "억제", "표현", "억제 ↔ 표현 (표현 점수)", FP) 
-        st.pyplot(fig1, clear_figure=True)
-        plt.close(fig1)
+        draw_score_bar(ax1, expr_pct, "억제", "표현", "억제 ↔ 표현 (표현 점수)", FP)
+        st.pyplot(fig1, clear_figure=True); plt.close(fig1)
 
-        # 
         fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(ax2, eff_pct, "자기효능감 낮음", "자기효능감 높음", "자기효능감", FP)
-        st.pyplot(fig2, clear_figure=True)
-        plt.close(fig2)
+        draw_score_bar(ax2, eff_pct, "자기효능감 낮음", "자기효능감 높음", "자기효능감", FP)
+        st.pyplot(fig2, clear_figure=True); plt.close(fig2)
+
 
     st.divider()
 
