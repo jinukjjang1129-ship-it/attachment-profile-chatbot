@@ -1045,38 +1045,35 @@ def render_result():
         st.write("애착 영역")
         draw_quadrant(self_model, other_model)
 
-        expr_pct = score_to_pct_0_100(expression)
-        eff_pct = score_to_pct_0_100(efficacy)
+        # 높을수록 오른쪽(표현/높음)로 가는 점수
+        expr_pct = score_to_pct_0_100(expression)  # 높을수록 '표현'
+        eff_pct = score_to_pct_0_100(efficacy)     # 높을수록 '자기효능감 높음'
 
-            expr_pct = score_to_pct_0_100(expression)  # 높을수록 '표현'
-    eff_pct = score_to_pct_0_100(efficacy)     # 높을수록 '자기효능감 높음'
+        # ✅ 왼쪽이 '억제'이므로, 왼쪽(억제) 비율 = 100 - expr_pct
+        fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
+        draw_dual_bar(
+            ax1,
+            100 - expr_pct,
+            "억제",
+            "표현",
+            "억제 ↔ 표현 (표현 점수)",
+            FP,
+        )
+        st.pyplot(fig1, clear_figure=True)
+        plt.close(fig1)
 
-    # ✅ 왼쪽이 '억제'이므로, 왼쪽(억제) 비율로 넘기기 위해 100 - expr_pct
-    fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
-    draw_dual_bar(
-        ax1,
-        100 - expr_pct,
-        "억제",
-        "표현",
-        "억제 ↔ 표현 (표현 점수)",
-        FP,
-    )
-    st.pyplot(fig1, clear_figure=True)
-    plt.close(fig1)
-
-    # ✅ 왼쪽이 '낮음'이므로, 왼쪽(낮음) 비율로 넘기기 위해 100 - eff_pct
-    fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
-    draw_dual_bar(
-        ax2,
-        100 - eff_pct,
-        "자기효능감 낮음",
-        "자기효능감 높음",
-        "자기효능감",
-        FP,
-    )
-    st.pyplot(fig2, clear_figure=True)
-    plt.close(fig2)
-
+        # ✅ 왼쪽이 '낮음'이므로, 왼쪽(낮음) 비율 = 100 - eff_pct
+        fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
+        draw_dual_bar(
+            ax2,
+            100 - eff_pct,
+            "자기효능감 낮음",
+            "자기효능감 높음",
+            "자기효능감",
+            FP,
+        )
+        st.pyplot(fig2, clear_figure=True)
+        plt.close(fig2)
 
     st.divider()
 
