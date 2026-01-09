@@ -905,24 +905,35 @@ def reset_chat():
 
 def render_survey():
     st.title("성향 프로필 (설문)")
-    st.caption("1(전혀 아니다) ~ 7(매우 그렇다)")
+    st.caption("1(전혀 아니다) ~ 7(매우 그렇다) · 4는 중간")
+
+    CHOICES = [1, 2, 3, 4, 5, 6, 7]
 
     for i, idx in enumerate(st.session_state.order, start=1):
         q = QUESTIONS[idx]
         st.markdown(f"**{i}. {q['text']}**")
-        CHOICES_NO_MID = [1, 2, 3, 5, 6, 7]
 
         st.radio(
             label="",
-            options=CHOICES_NO_MID,
+            options=CHOICES,
             horizontal=True,
             key=q["key"],
+            index=None,  # ✅ 선택 안 하면 None
         )
+
         st.markdown("---")
 
     if st.button("다음 ▶ (결과 보기)", use_container_width=True):
-    # ✅ 설문 응답 스냅샷 저장(다시보기용)
-        st.session_state.survey_answers = {q["key"]: st.session_state.get(q["key"], 4) for q in QUESTIONS}
+        # ✅ 미응답 체크
+        missing = [q["key"] for q in QUESTIONS if st.session_state.get(q["key"]) is None]
+        if missing:
+            st.error("모든 문항에 답변해 주세요.")
+            st.stop()
+
+        # ✅ 설문 응답 스냅샷 저장
+        st.session_state.survey_answers = {
+            q["key"]: st.session_state[q["key"]] for q in QUESTIONS
+        }
         st.session_state.survey_completed = True
         go_result()
 
@@ -942,7 +953,7 @@ def draw_quadrant(self_model: float, other_model: float):
     ax.axhline(50, color="black", linewidth=2.0, zorder=1)
 
     ax.text(25, 75, "안정형", ha="center", va="center", fontproperties=FP, fontsize=16)
-    ax.text(75, 75, "의존형", ha="center", va="center", fontproperties=FP, fontsize=16)
+    ax.text(75, 75, "불안형", ha="center", va="center", fontproperties=FP, fontsize=16)
     ax.text(25, 25, "거부형", ha="center", va="center", fontproperties=FP, fontsize=16)
     ax.text(75, 25, "회피형", ha="center", va="center", fontproperties=FP, fontsize=16)
 
@@ -1049,29 +1060,15 @@ def render_result():
         expr_pct = score_to_pct_0_100(expression)  # 높을수록 '표현'
         eff_pct = score_to_pct_0_100(efficacy)     # 높을수록 '자기효능감 높음'
 
-        # ✅ 왼쪽이 '억제'이므로, 왼쪽(억제) 비율 = 100 - expr_pct
+        # 
         fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(
-            ax1,
-            100 - expr_pct,
-            "억제",
-            "표현",
-            "억제 ↔ 표현 (표현 점수)",
-            FP,
-        )
+        draw_dual_bar(ax1, expr_pct, "억제", "표현", "억제 ↔ 표현 (표현 점수)", FP) 
         st.pyplot(fig1, clear_figure=True)
         plt.close(fig1)
 
-        # ✅ 왼쪽이 '낮음'이므로, 왼쪽(낮음) 비율 = 100 - eff_pct
+        # 
         fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(
-            ax2,
-            100 - eff_pct,
-            "자기효능감 낮음",
-            "자기효능감 높음",
-            "자기효능감",
-            FP,
-        )
+        draw_dual_bar(ax2, eff_pct, "자기효능감 낮음", "자기효능감 높음", "자기효능감", FP)
         st.pyplot(fig2, clear_figure=True)
         plt.close(fig2)
 
