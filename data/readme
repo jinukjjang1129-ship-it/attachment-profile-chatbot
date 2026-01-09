@@ -1,0 +1,121 @@
+persona_rules.json : 별명 별 상담자 매핑 룰
+  {
+    "rule_id": "PRE1_0001",
+    "nickname": "당당한 골든리트리버",
+    "tone": "동등·존중형",
+    "goal": "과도한 자기책임 완화",
+    "core_traits": "정서 안정, 자기·타인 긍정",
+    "forbidden_phrases": [
+      "그래도 당신이 더 참으면 되죠"
+    ],
+    "axis": {
+      "attachment": "안정형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 당당한 골든리트리버\n[핵심 특성] 정서 안정, 자기·타인 긍정\n[상담자 목표] 과도한 자기책임 완화\n[권장 톤] 동등·존중형\n[금지 화법] “그래도 당신이 더 참으면 되죠”\n[축-애착] 안정형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음"
+  }
+
+--- 상담 전 사용자에 대한 이해를 위한 db
+collection_name : user_profile
+t01_core_types_axis.json : 기준 별 설명
+  {
+    "id": "PRE2_A_0001",
+    "page_content": "[애착] 안정형\n친밀감과 독립성의 균형이 좋으며 관계에서 안정감을 느낍니다. 감정을 자연스럽게 표현하고 갈등 상황에서도 회피하지 않고 조율하려는 태도가 강합니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "attachment",
+      "axis_value": "안정형",
+      "ref_row_id": "PRE2_A_0001"
+    }
+  }
+t01_core_types_persona.json : 별명별 특징, 상담자의 톤
+  {
+    "id": "PRE1_0001",
+    "page_content": "[별명] 당당한 골든리트리버\n[핵심 특성] 정서 안정, 자기·타인 긍정\n[상담자 목표] 과도한 자기책임 완화\n[권장 톤] 동등·존중형\n[금지 화법] “그래도 당신이 더 참으면 되죠”\n[축-애착] 안정형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "persona_rule",
+      "row_id": "PRE1_0001",
+      "version": "v1",
+      "attachment": "안정형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음",
+      "nickname": "당당한 골든리트리버"
+    }
+  }
+t02_type_desc.json : 별명 별 해당하는 기준과 구체적인 설명
+  {
+    "id": "PRE3_0001",
+    "page_content": "[별명] 당당한 골든리트리버\n[설명] 이 유형은 자신과 타인을 모두 긍정적으로 보며, 감정을 자연스럽게 표현하는 편이에요. 자신의 능력에 대한 확신도 있어 관계와 목표 모두에서 안정적인 기반을 가지고 움직입니다. 누군가와 함께할 때 편안함을 주고, 갈등이 발생해도 과도하게 흔들리지 않아요. 감정을 숨기기보다 맥락을 설명하며 차분히 조율하려는 태도가 강해, 주변에서도 신뢰를 쉽게 얻는 편입니다. 어려움이 와도 회피하기보다 해결을 향해 접근하고, “할 수 있다”는 믿음으로 조용히 지속해 나갑니다. 관계에서도 과도한 기대나 의존 없이 자연스럽게 친밀감을 쌓아가는 것이 특징이에요. 이 유형은 타고난 균형감이 있지만, 모든 상황을 스스로 정리하려 하기보다 때때로 주변의 도움을 받아들이면 더 여유로운 관계를 만들 수 있어요.",
+    "metadata": {
+      "dataset": "pre_persona_descriptions",
+      "doc_type": "persona_desc",
+      "row_id": "PRE3_0001",
+      "version": "v1",
+      "keys": {
+        "attachment": "안정형",
+        "emotion_reg": "표현형",
+        "efficacy": "높음",
+        "nickname": "당당한 골든리트리버"
+      }
+    }
+  }
+
+--- 상담 답변 시 참고 상황
+collection_name : counsel_db
+t03_playbook.json : 상황력 감정 키워드, 나와 상대방 심리 분석
+  {
+    "id": "MID4_0001",
+    "page_content": "[카테고리] 연락\n[상황요약] 평소와 달리 답장이 3~4시간 늦어지고 단답형임\n[키워드] [연락][답장텀][불안]\n[감정] 불안, 초조, 의심\n[심리(사용자)] 연락 빈도를 애정 척도로 인식하는 불안형 기제 발동. 상대의 침묵을 거절 신호로 왜곡 해석함.\n[심리(상대방)] 업무나 상황적 요인으로 인한 '관계 에너지' 고갈 상태. 혼자만의 시간을 통해 재충전이 필요한 단계.\n[해결가이드] 1. '왜 안 봐?' 추궁 금지2. 상대 침묵을 '휴식'으로 재정의3. 내 할 일 하며 기다리기",
+    "metadata": {
+      "dataset": "mid_conflict_playbook",
+      "doc_type": "playbook",
+      "row_id": "MID4_0001",
+      "version": "v1",
+      "keys": { "category": "연락" }
+    }
+  }
+
+---위험 프로토콜 관련 db
+collection_name : risk_protocol
+t06_risk_map.json : level0~3 별 특징과 수행해야 하는 필수 step 제시
+  {
+    "id": "MID6_L_0002",
+    "page_content": "[Level L2]\n[위험강도] 중간\n[대표표현] 가스라이팅적 조언 요구, 감시, 통제, 집착적 행동, 위치 추적, 반복 확인 요구, '숨이 막혀', '아무것도 못 하겠어'\n[판정기준] 감정 조절 불가, 패닉 수준 묘사\n[주의사항] 신체적 위험 언급 시 Level 상향\n[필수Step] Step 1 → Step 2 → Step 3 → Step 4\n[비고] 경계 설정 중요",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_level_example",
+      "row_id": "MID6_L_0002",
+      "version": "v1",
+      "keys": {
+        "level": "L2"
+      },
+      "level": 2,
+      "required_steps": [
+        "Step 1 → Step 2 → Step 3 → Step 4"
+      ]
+    }
+  }
+t07_risk_steps.json : step1~6별 의미 설명
+  {
+    "id": "MID6_STEP_0001",
+    "page_content": "[STEP_1] 상태 인식\n[적용목적] 현재 고통을 명확히 인식\n[상담자핵심행동] 감정·상태를 판단 없이 반영\n[내용] “지금 말씀을 보면 많이 힘드신 상태로 느껴져요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0001",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_1"
+      },
+      "step_id": "STEP_1"
+    }
+  }

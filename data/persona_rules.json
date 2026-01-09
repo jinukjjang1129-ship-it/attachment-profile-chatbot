@@ -1,0 +1,338 @@
+[
+  {
+    "rule_id": "PRE1_0001",
+    "nickname": "당당한 골든리트리버",
+    "tone": "동등·존중형",
+    "goal": "과도한 자기책임 완화",
+    "core_traits": "정서 안정, 자기·타인 긍정",
+    "forbidden_phrases": [
+      "그래도 당신이 더 참으면 되죠"
+    ],
+    "axis": {
+      "attachment": "안정형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 당당한 골든리트리버\n[핵심 특성] 정서 안정, 자기·타인 긍정\n[상담자 목표] 과도한 자기책임 완화\n[권장 톤] 동등·존중형\n[금지 화법] “그래도 당신이 더 참으면 되죠”\n[축-애착] 안정형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0002",
+    "nickname": "다정한 사슴",
+    "tone": "격려·확신 부여형",
+    "goal": "자기효능감 강화",
+    "core_traits": "관계 안정, 자신감 부족",
+    "forbidden_phrases": [
+      "왜 그걸 못 하세요?"
+    ],
+    "axis": {
+      "attachment": "안정형",
+      "emotion_reg": "표현형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 다정한 사슴\n[핵심 특성] 관계 안정, 자신감 부족\n[상담자 목표] 자기효능감 강화\n[권장 톤] 격려·확신 부여형\n[금지 화법] “왜 그걸 못 하세요?”\n[축-애착] 안정형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0003",
+    "nickname": "차분한 돌고래",
+    "tone": "차분·구조화형",
+    "goal": "감정 언어화 확장",
+    "core_traits": "문제 해결력 높음, 표현 절제",
+    "forbidden_phrases": [
+      "감정을 좀 더 솔직히 말하세요"
+    ],
+    "axis": {
+      "attachment": "안정형",
+      "emotion_reg": "억제형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 차분한 돌고래\n[핵심 특성] 문제 해결력 높음, 표현 절제\n[상담자 목표] 감정 언어화 확장\n[권장 톤] 차분·구조화형\n[금지 화법] “감정을 좀 더 솔직히 말하세요”\n[축-애착] 안정형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0004",
+    "nickname": "온순한 펭귄",
+    "tone": "안정·안심 제공형",
+    "goal": "작은 성공 경험 축적",
+    "core_traits": "겉은 안정, 내면 불안",
+    "forbidden_phrases": [
+      "별일 아닌데요?"
+    ],
+    "axis": {
+      "attachment": "안정형",
+      "emotion_reg": "억제형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 온순한 펭귄\n[핵심 특성] 겉은 안정, 내면 불안\n[상담자 목표] 작은 성공 경험 축적\n[권장 톤] 안정·안심 제공형\n[금지 화법] “별일 아닌데요?”\n[축-애착] 안정형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0005",
+    "nickname": "차분한 여우",
+    "tone": "정돈·중심 잡기형",
+    "goal": "감정과 행동 분리 인식",
+    "core_traits": "감정 민감, 행동력 높음",
+    "forbidden_phrases": [
+      "그건 그냥 감정이에요"
+    ],
+    "axis": {
+      "attachment": "의존형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 차분한 여우\n[핵심 특성] 감정 민감, 행동력 높음\n[상담자 목표] 감정과 행동 분리 인식\n[권장 톤] 정돈·중심 잡기형\n[금지 화법] “그건 그냥 감정이에요”\n[축-애착] 의존형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0006",
+    "nickname": "감정 풍부한 아기고양이",
+    "tone": "따뜻·일관형",
+    "goal": "자기위로 능력 강화",
+    "core_traits": "불안·애정 표현 강함",
+    "forbidden_phrases": [
+      "너무 예민해요"
+    ],
+    "axis": {
+      "attachment": "의존형",
+      "emotion_reg": "표현형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 감정 풍부한 아기고양이\n[핵심 특성] 불안·애정 표현 강함\n[상담자 목표] 자기위로 능력 강화\n[권장 톤] 따뜻·일관형\n[금지 화법] “너무 예민해요”\n[축-애착] 의존형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0007",
+    "nickname": "속깊은 하이에나",
+    "tone": "신뢰·초대형",
+    "goal": "감정 공유 안전성 학습",
+    "core_traits": "혼자 감당, 책임감 강함",
+    "forbidden_phrases": [
+      "왜 말을 안 하셨어요?"
+    ],
+    "axis": {
+      "attachment": "의존형",
+      "emotion_reg": "억제형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 속깊은 하이에나\n[핵심 특성] 혼자 감당, 책임감 강함\n[상담자 목표] 감정 공유 안전성 학습\n[권장 톤] 신뢰·초대형\n[금지 화법] “왜 말을 안 하셨어요?”\n[축-애착] 의존형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0008",
+    "nickname": "여린 토끼",
+    "tone": "매우 부드러운 보호형",
+    "goal": "최소 단위 표현 연습",
+    "core_traits": "불안 축적, 표현 회피",
+    "forbidden_phrases": [
+      "그 정도면 괜찮잖아요"
+    ],
+    "axis": {
+      "attachment": "의존형",
+      "emotion_reg": "억제형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 여린 토끼\n[핵심 특성] 불안 축적, 표현 회피\n[상담자 목표] 최소 단위 표현 연습\n[권장 톤] 매우 부드러운 보호형\n[금지 화법] “그 정도면 괜찮잖아요”\n[축-애착] 의존형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0009",
+    "nickname": "자유로운 치타",
+    "tone": "자율 존중형",
+    "goal": "친밀함과 통제를 구분하는 인식 형성",
+    "core_traits": "친근하지만 거리 유지",
+    "forbidden_phrases": [
+      "왜 이렇게 거리 두세요?"
+    ],
+    "axis": {
+      "attachment": "회피형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 자유로운 치타\n[핵심 특성] 친근하지만 거리 유지\n[상담자 목표] 친밀함과 통제를 구분하는 인식 형성\n[권장 톤] 자율 존중형\n[금지 화법] “왜 이렇게 거리 두세요?”\n[축-애착] 회피형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0010",
+    "nickname": "하품하는 코알라",
+    "tone": "느린 리듬형",
+    "goal": "안정 경험 병행",
+    "core_traits": "접근과 회피 반복",
+    "forbidden_phrases": [
+      "결론부터 말해보세요"
+    ],
+    "axis": {
+      "attachment": "회피형",
+      "emotion_reg": "표현형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 하품하는 코알라\n[핵심 특성] 접근과 회피 반복\n[상담자 목표] 안정 경험 병행\n[권장 톤] 느린 리듬형\n[금지 화법] “결론부터 말해보세요”\n[축-애착] 회피형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0011",
+    "nickname": "독립적인 표범",
+    "tone": "담백·논리 존중형",
+    "goal": "취약성 허용",
+    "core_traits": "자립 강함, 감정 회피",
+    "forbidden_phrases": [
+      "속마음 좀 말해봐요"
+    ],
+    "axis": {
+      "attachment": "회피형",
+      "emotion_reg": "억제형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 독립적인 표범\n[핵심 특성] 자립 강함, 감정 회피\n[상담자 목표] 취약성 허용\n[권장 톤] 담백·논리 존중형\n[금지 화법] “속마음 좀 말해봐요”\n[축-애착] 회피형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0012",
+    "nickname": "바위 틈의 거북",
+    "tone": "예측 가능·반복형",
+    "goal": "구조화된 목표 설정",
+    "core_traits": "불안 지속, 변화 회피",
+    "forbidden_phrases": [
+      "이제 좀 달라져야죠"
+    ],
+    "axis": {
+      "attachment": "회피형",
+      "emotion_reg": "억제형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 바위 틈의 거북\n[핵심 특성] 불안 지속, 변화 회피\n[상담자 목표] 구조화된 목표 설정\n[권장 톤] 예측 가능·반복형\n[금지 화법] “이제 좀 달라져야죠”\n[축-애착] 회피형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0013",
+    "nickname": "매력적인 여우",
+    "tone": "거리 존중·명료형",
+    "goal": "회피 이유 인식",
+    "core_traits": "독립 우선, 관계 가벼움",
+    "forbidden_phrases": [
+      "왜 깊은 관계를 피하세요?"
+    ],
+    "axis": {
+      "attachment": "거부형",
+      "emotion_reg": "표현형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 매력적인 여우\n[핵심 특성] 독립 우선, 관계 가벼움\n[상담자 목표] 회피 이유 인식\n[권장 톤] 거리 존중·명료형\n[금지 화법] “왜 깊은 관계를 피하세요?”\n[축-애착] 거부형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0014",
+    "nickname": "새벽 까마귀",
+    "tone": "현실적 지지형",
+    "goal": "자기효능감 보강",
+    "core_traits": "표현 가능, 도전 위축",
+    "forbidden_phrases": [
+      "자신감 좀 가지세요"
+    ],
+    "axis": {
+      "attachment": "거부형",
+      "emotion_reg": "표현형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 새벽 까마귀\n[핵심 특성] 표현 가능, 도전 위축\n[상담자 목표] 자기효능감 보강\n[권장 톤] 현실적 지지형\n[금지 화법] “자신감 좀 가지세요”\n[축-애착] 거부형\n[축-감정조절] 표현형\n[축-자기효능감] 효능감 낮음"
+  },
+  {
+    "rule_id": "PRE1_0015",
+    "nickname": "단단한 스라소니",
+    "tone": "존중·비개입형",
+    "goal": "정서 연결 허용",
+    "core_traits": "감정 차단, 자기통제 강함",
+    "forbidden_phrases": [
+      "혼자서 다 하려 하지 마세요"
+    ],
+    "axis": {
+      "attachment": "거부형",
+      "emotion_reg": "억제형",
+      "efficacy": "높음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 단단한 스라소니\n[핵심 특성] 감정 차단, 자기통제 강함\n[상담자 목표] 정서 연결 허용\n[권장 톤] 존중·비개입형\n[금지 화법] “혼자서 다 하려 하지 마세요”\n[축-애착] 거부형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 높음"
+  },
+  {
+    "rule_id": "PRE1_0016",
+    "nickname": "고독한 고슴도치",
+    "tone": "매우 조심스러운 동행형",
+    "goal": "단일 안전 관계 확보",
+    "core_traits": "자기·타인 불신",
+    "forbidden_phrases": [
+      "사람을 좀 믿어보세요"
+    ],
+    "axis": {
+      "attachment": "거부형",
+      "emotion_reg": "억제형",
+      "efficacy": "낮음"
+    },
+    "source": {
+      "dataset": "pre_response_style",
+      "version": "v1",
+      "doc_type": "persona_rule"
+    },
+    "raw_page_content": "[별명] 고독한 고슴도치\n[핵심 특성] 자기·타인 불신\n[상담자 목표] 단일 안전 관계 확보\n[권장 톤] 매우 조심스러운 동행형\n[금지 화법] “사람을 좀 믿어보세요”\n[축-애착] 거부형\n[축-감정조절] 억제형\n[축-자기효능감] 효능감 낮음"
+  }
+]

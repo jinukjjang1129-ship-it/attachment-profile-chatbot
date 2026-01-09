@@ -1,0 +1,70 @@
+[
+  {
+    "id": "MID6_L_0000",
+    "page_content": "[Level L0]\n[위험강도] 정상\n[대표표현] '요즘 좀 힘들어요', '관계가 고민이에요'\n[판정기준] 위기 신호 없음\n[주의사항] 다른 위험 신호가 없을 때만 해당\n[필수Step] 일반 상담\n[비고] 프로토콜 미적용",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_level_example",
+      "row_id": "MID6_L_0000",
+      "version": "v1",
+      "keys": {
+        "level": "L0"
+      },
+      "level": 0,
+      "required_steps": [
+        "일반 상담"
+      ]
+    }
+  },
+  {
+    "id": "MID6_L_0001",
+    "page_content": "[Level L1]\n[위험강도] 경미\n[대표표현] '나는 아무것도 아니야', '내가 쓸모없어'\n[판정기준] 자기비하가 반복되거나 정체성 수준으로 확장됨\n[주의사항] 자살 암시 포함 시 level3 우선\n[필수Step] Step 1 → Step 2\n[비고] 공감·안정 중심",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_level_example",
+      "row_id": "MID6_L_0001",
+      "version": "v1",
+      "keys": {
+        "level": "L1"
+      },
+      "level": 1,
+      "required_steps": [
+        "Step 1 → Step 2"
+      ]
+    }
+  },
+  {
+    "id": "MID6_L_0002",
+    "page_content": "[Level L2]\n[위험강도] 중간\n[대표표현] 가스라이팅적 조언 요구, 감시, 통제, 집착적 행동, 위치 추적, 반복 확인 요구, '숨이 막혀', '아무것도 못 하겠어'\n[판정기준] 감정 조절 불가, 패닉 수준 묘사\n[주의사항] 신체적 위험 언급 시 Level 상향\n[필수Step] Step 1 → Step 2 → Step 3 → Step 4\n[비고] 경계 설정 중요",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_level_example",
+      "row_id": "MID6_L_0002",
+      "version": "v1",
+      "keys": {
+        "level": "L2"
+      },
+      "level": 2,
+      "required_steps": [
+        "Step 1 → Step 2 → Step 3 → Step 4"
+      ]
+    }
+  },
+  {
+    "id": "MID6_L_0003",
+    "page_content": "[Level L3]\n[위험강도] 치명적\n[대표표현] 자해·자살 암시, 폭력적 발언\n[판정기준] 명시적 언급 또는 강한 암시\n[주의사항] 최우선 적용\n[필수Step] Step 1 → Step 2 → Step 3 → Step 4 → Step 5\n[비고] 안전 확보 최우선",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_level_example",
+      "row_id": "MID6_L_0003",
+      "version": "v1",
+      "keys": {
+        "level": "L3"
+      },
+      "level": 3,
+      "required_steps": [
+        "Step 1 → Step 2 → Step 3 → Step 4 → Step 5"
+      ]
+    }
+  }
+]

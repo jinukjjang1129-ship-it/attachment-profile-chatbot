@@ -1,0 +1,15 @@
+# secrets
+.env
+.streamlit/secrets.toml
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# chroma/vecdb (일단 배포 우선이면 빼는 게 안전)
+chroma_store/
+
+# OS
+.DS_Store
+Thumbs.db

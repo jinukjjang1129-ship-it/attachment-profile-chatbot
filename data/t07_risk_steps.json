@@ -1,0 +1,86 @@
+[
+  {
+    "id": "MID6_STEP_0001",
+    "page_content": "[STEP_1] 상태 인식\n[적용목적] 현재 고통을 명확히 인식\n[상담자핵심행동] 감정·상태를 판단 없이 반영\n[내용] “지금 말씀을 보면 많이 힘드신 상태로 느껴져요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0001",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_1"
+      },
+      "step_id": "STEP_1"
+    }
+  },
+  {
+    "id": "MID6_STEP_0002",
+    "page_content": "[STEP_2] 정서 안정\n[적용목적] 정서적 과부하 완화\n[상담자핵심행동] 짧고 안정적인 문장으로 진정 유도\n[내용] “지금은 해결을 바로 찾기보다, 조금 숨을 고르는 게 중요해 보여요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0002",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_2"
+      },
+      "step_id": "STEP_2"
+    }
+  },
+  {
+    "id": "MID6_STEP_0003",
+    "page_content": "[STEP_3] 경계 설정\n[적용목적] 역할·윤리·책임 구분\n[상담자핵심행동] 할 수 없는 도움을 명확히 고지\n[내용] “그 부분에 대해서는 제가 조언이나 방법을 제시해 드릴 수는 없어요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0003",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_3"
+      },
+      "step_id": "STEP_3"
+    }
+  },
+  {
+    "id": "MID6_STEP_0004",
+    "page_content": "[STEP_4] 외부 연결\n[적용목적] 도움 경로 확장\n[상담자핵심행동] 전문 기관·지지 자원 안내\n[내용] “이 상황에서는 혼자 버티기보다 전문적인 도움을 받는 것이 도움이 될 수 있어요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0004",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_4"
+      },
+      "step_id": "STEP_4"
+    }
+  },
+  {
+    "id": "MID6_STEP_0005",
+    "page_content": "[STEP_5] 안전 확보\n[적용목적] 즉각적 위험 차단\n[상담자핵심행동] 긴급 연락처 제시\n[내용] “지금처럼 위험하게 느껴질 때는 1393이나 1577-0199로 바로 연락해 주세요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0005",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_5"
+      },
+      "step_id": "STEP_5"
+    }
+  },
+  {
+    "id": "MID6_STEP_0006",
+    "page_content": "[STEP_6] 관계 정렬\n[적용목적] 상담 종료·전환\n[상담자핵심행동] 안전한 종료 또는 이관\n[내용] “지금은 여기까지 정리하고, 도움을 받을 수 있는 경로로 연결되는 게 가장 안전해요.”",
+    "metadata": {
+      "dataset": "mid_risk_response",
+      "doc_type": "risk_step",
+      "row_id": "MID6_STEP_0006",
+      "version": "v1",
+      "keys": {
+        "step": "STEP_6"
+      },
+      "step_id": "STEP_6"
+    }
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "PRE2_A_0001",
+    "page_content": "[애착] 안정형\n친밀감과 독립성의 균형이 좋으며 관계에서 안정감을 느낍니다. 감정을 자연스럽게 표현하고 갈등 상황에서도 회피하지 않고 조율하려는 태도가 강합니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "attachment",
+      "axis_value": "안정형",
+      "ref_row_id": "PRE2_A_0001"
+    }
+  },
+  
+  {
+    "id": "PRE2_A_0002",
+    "page_content": "[애착] 의존형\n관계에 대한 불안이 크고 타인의 반응에 과도하게 민감합니다. 자기 가치감을 타인의 인정에 의존하며 버림받을까 하는 두려움으로 집착·확인 행동이 반복되기 쉽습니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "attachment",
+      "axis_value": "의존형",
+      "ref_row_id": "PRE2_A_0002"
+    }
+  },
+  {
+    "id": "PRE2_A_0003",
+    "page_content": "[애착] 회피형\n친밀감을 원하면서도 동시에 두려워하는 양가적 태도를 보입니다. 관계가 가까워질수록 방어·회피가 증가하고 감정을 억압하며 거리두기를 반복합니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "attachment",
+      "axis_value": "회피형",
+      "ref_row_id": "PRE2_A_0003"
+    }
+  },
+  {
+    "id": "PRE2_A_0004",
+    "page_content": "[애착] 거부형\n독립성을 중시하고 타인을 신뢰하지 않으며 관계 의존을 회피합니다. 감정을 축소·지성화하고 친밀감이 깊어질수록 거리두기와 단절을 선택하기 쉽습니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "attachment",
+      "axis_value": "거부형",
+      "ref_row_id": "PRE2_A_0004"
+    }
+  },
+  {
+    "id": "PRE2_B_0001",
+    "page_content": "[감정조절] 표현형\n감정을 억누르기보다 인지적 재해석을 통해 조절하는 선행적 전략을 사용합니다. 갈등 상황에서도 감정 폭발이 적고 설명·맥락 중심의 안정적인 소통을 선호합니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "emotion_reg",
+      "axis_value": "표현형",
+      "ref_row_id": "PRE2_B_0001"
+    }
+  },
+    {
+    "id": "PRE2_B_0002",
+    "page_content": "[감정조절] 억제형\n감정이 생긴 뒤 표현을 차단하는 후행적 전략을 사용합니다. 겉으로는 침착해 보이지만 내부 스트레스가 누적되며 친밀해질수록 방어·회피 반응이 나타나기 쉽습니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "emotion_reg",
+      "axis_value": "억제형",
+      "ref_row_id": "PRE2_B_0002"
+    }
+  },
+  {
+    "id": "PRE2_C_0001",
+    "page_content": "[자기효능감] 효능감 높음\n도전적 과제를 선택하고 실패 후에도 쉽게 포기하지 않습니다. 성취 경험을 바탕으로 자기 신뢰가 높고 위협 상황에서도 문제 해결을 위해 적극적으로 접근합니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "self_efficacy",
+      "axis_value": "효능감 높음",
+      "ref_row_id": "PRE2_C_0001"
+    }
+  },
+  {
+    "id": "PRE2_C_0002",
+    "page_content": "[자기효능감] 효능감 낮음\n위협적이거나 어려운 과제를 회피하는 경향이 강합니다. 실패 경험과 높은 불안으로 인해 자기 신뢰가 낮고 노력과 지속성이 쉽게 떨어집니다.",
+    "metadata": {
+      "dataset": "pre_response_style",
+      "doc_type": "axis_anchor",
+      "version": "v1",
+      "axis_name": "self_efficacy",
+      "axis_value": "효능감 낮음",
+      "ref_row_id": "PRE2_C_0002"
+    }
+  }
+]
