@@ -964,9 +964,13 @@ def score_to_pct_0_100(score_1_7: float) -> int:
     return int(round((score_1_7 - 1) / 6 * 100))
 
 
-def draw_dual_bar(ax, pct_left, left_end_label, right_end_label, title, font_prop):
-    pct_left = max(0, min(100, int(pct_left)))
-    pct_right = 100 - pct_left
+def draw_dual_bar(ax, pct_right, left_end_label, right_end_label, title, font_prop):
+    """
+    pct_right: 0~100 (오른쪽 비율)
+    - 오른쪽이 '높음/표현' 같이 긍정 방향일 때 그대로 넣으면 직관적으로 맞습니다.
+    """
+    pct_right = max(0, min(100, int(pct_right)))
+    pct_left = 100 - pct_right
 
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 1)
@@ -975,26 +979,35 @@ def draw_dual_bar(ax, pct_left, left_end_label, right_end_label, title, font_pro
     bar_h = 0.42
     y = 0.5
 
-    left_color = "#F28C28"
-    right_color = "#D7EAF6"
+    # 왼쪽(낮음/억제), 오른쪽(높음/표현)
+    left_color = "#D7EAF6"
+    right_color = "#F28C28"
 
-    ax.barh([y], [pct_left], height=bar_h, left=0, zorder=2, color=left_color)
-    ax.barh([y], [pct_right], height=bar_h, left=pct_left, zorder=1, color=right_color)
+    # 왼쪽 채움
+    ax.barh([y], [pct_left], height=bar_h, left=0, zorder=1, color=left_color)
+    # 오른쪽 채움
+    ax.barh([y], [pct_right], height=bar_h, left=pct_left, zorder=2, color=right_color)
 
     ax.text(0, 1.05, title, ha="left", va="bottom", fontproperties=font_prop, fontsize=14)
 
     ax.text(0, -0.15, left_end_label, ha="left", va="top", fontproperties=font_prop, fontsize=11)
     ax.text(100, -0.15, right_end_label, ha="right", va="top", fontproperties=font_prop, fontsize=11)
 
+    # 왼쪽 % 표시
     if pct_left >= 10:
-        ax.text(pct_left - 2, y, f"{pct_left}%", ha="right", va="center", fontproperties=font_prop, fontsize=13, color="white", zorder=3)
+        ax.text(pct_left - 2, y, f"{pct_left}%", ha="right", va="center",
+                fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
     else:
-        ax.text(pct_left + 2, y, f"{pct_left}%", ha="left", va="center", fontproperties=font_prop, fontsize=13, color="black", zorder=3)
+        ax.text(pct_left + 2, y, f"{pct_left}%", ha="left", va="center",
+                fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
 
+    # 오른쪽 % 표시
     if pct_right >= 10:
-        ax.text(98, y, f"{pct_right}%", ha="right", va="center", fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
+        ax.text(98, y, f"{pct_right}%", ha="right", va="center",
+                fontproperties=font_prop, fontsize=13, color="white", zorder=3)
     else:
-        ax.text(pct_left + pct_right + 2, y, f"{pct_right}%", ha="left", va="center", fontproperties=font_prop, fontsize=13, color="#2B2B2B", zorder=3)
+        ax.text(pct_left + 2, y, f"{pct_right}%", ha="left", va="center",
+                fontproperties=font_prop, fontsize=13, color="white", zorder=3)
 
 
 def render_result():
@@ -1035,27 +1048,35 @@ def render_result():
         expr_pct = score_to_pct_0_100(expression)
         eff_pct = score_to_pct_0_100(efficacy)
 
-        fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(
-            ax1,
-            expr_pct,
-            "억제",
-            "표현",
-            "억제 ↔ 표현 (표현 점수)",
-            FP,
-        )
-        st.pyplot(fig1)
+            expr_pct = score_to_pct_0_100(expression)  # 높을수록 '표현'
+    eff_pct = score_to_pct_0_100(efficacy)     # 높을수록 '자기효능감 높음'
 
-        fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
-        draw_dual_bar(
-            ax2,
-            eff_pct,
-            "자기효능감 낮음",
-            "자기효능감 높음",
-            "자기효능감",
-            FP,
-        )
-        st.pyplot(fig2)
+    # ✅ 왼쪽이 '억제'이므로, 왼쪽(억제) 비율로 넘기기 위해 100 - expr_pct
+    fig1, ax1 = plt.subplots(figsize=(7.2, 1.1))
+    draw_dual_bar(
+        ax1,
+        100 - expr_pct,
+        "억제",
+        "표현",
+        "억제 ↔ 표현 (표현 점수)",
+        FP,
+    )
+    st.pyplot(fig1, clear_figure=True)
+    plt.close(fig1)
+
+    # ✅ 왼쪽이 '낮음'이므로, 왼쪽(낮음) 비율로 넘기기 위해 100 - eff_pct
+    fig2, ax2 = plt.subplots(figsize=(7.2, 1.1))
+    draw_dual_bar(
+        ax2,
+        100 - eff_pct,
+        "자기효능감 낮음",
+        "자기효능감 높음",
+        "자기효능감",
+        FP,
+    )
+    st.pyplot(fig2, clear_figure=True)
+    plt.close(fig2)
+
 
     st.divider()
 
